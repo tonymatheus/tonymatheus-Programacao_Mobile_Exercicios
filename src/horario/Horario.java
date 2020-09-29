@@ -46,7 +46,7 @@ public class Horario {
 	}
 
 	public void incrementarSegundo() {
-		if (isLastSecond()) {
+		if (ehUltimoSegundo()) {
 			segundos = 0;
 		} else {
 			segundos++;
@@ -71,7 +71,7 @@ public class Horario {
 		}
 	}
 
-	public boolean isLastSecond() {
+	public boolean ehUltimoSegundo() {
 		int lastSecond = 86399;
 		if (segundos == lastSecond)
 			return true;
